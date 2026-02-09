@@ -1,601 +1,166 @@
-/* ===== GLOBAL STYLES ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     background: radial-gradient(circle, #ff6b6b, #4ecdc4);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px;
+    margin: 0;
 }
 
 .awalan {
     background: radial-gradient(circle, #9688f2, #4930f2);
-    width: 100%;
-    max-width: 800px;
-    padding: 0;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    overflow: hidden;
+    width: 75%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
-/* ===== NAVIGATION ===== */
 .ul-awal {
-    background-color: #333;
+    background-color: gray;
     display: flex;
-    height: auto;
+    height: 80px;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    padding: 10px;
-    margin: 0;
-    list-style: none;
 }
 
 .li-awal {
     list-style-type: none;
-    padding: 15px 20px;
-    margin: 5px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+    padding: 12px;
+    margin: 4px;
+    color: black;
+    font-size: 15px;
+    
 }
 
-.li-awal.active {
-    background-color: #4930f2;
+.description-keahlian{
+    color: black;
+    font-size: 20px;
 }
 
 .a-awal {
     color: white;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 0.5px;
+    width: 40%;
+    height: 15vh;
 }
 
 .li-awal:hover {
-    background-color: #5543ff;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background-color: blue;
+    transition: .5s ease-in-out;
+    transition-delay: .3s;
+    border-radius: 12px;
 }
 
-/* ===== TYPOGRAPHY ===== */
 h1 {
-    color: white;
-    margin: 30px 20px 20px;
-    font-size: 2.5em;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    color: black;
+    margin-bottom: 20px;
 }
 
-h2 {
-    color: white;
-    margin: 20px;
-    font-size: 1.8em;
-    text-align: center;
-}
-
-h3 {
-    color: white;
-    margin: 25px 20px 15px;
-    font-size: 1.4em;
+.profile-img {
+    width: 150px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 20px;
 }
 
 .description {
-    color: white;
-    line-height: 1.8;
-    margin: 20px;
-    font-size: 1.05em;
-    text-align: center;
-}
-
-/* ===== PROFILE IMAGE ===== */
-.profile-img {
-    width: 180px;
-    height: 220px;
-    border: 4px solid white;
-    border-radius: 15px;
-    object-fit: cover;
-    margin: 20px auto;
-    display: block;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease;
-}
-
-.profile-img:hover {
-    transform: scale(1.05);
-}
-
-/* ===== HERO SECTION (Beranda) ===== */
-.hero-section {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.cta-buttons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 30px;
-    flex-wrap: wrap;
-}
-
-.btn {
-    padding: 12px 30px;
-    border-radius: 8px;
-    text-decoration: none;
     font-weight: bold;
-    transition: all 0.3s ease;
-    display: inline-block;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
-.btn-primary {
-    background-color: white;
-    color: #4930f2;
-}
-
-.btn-primary:hover {
-    background-color: #f0f0f0;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
-}
-
-.btn-secondary:hover {
-    background-color: white;
-    color: #4930f2;
-}
-
-/* ===== QUICK INFO CARDS (Beranda) ===== */
-.quick-info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    margin: 20px 0;
-}
-
-.info-card {
-    background-color: rgba(255,255,255,0.15);
-    padding: 25px;
-    border-radius: 12px;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s ease;
-}
-
-.info-card:hover {
-    transform: translateY(-5px);
-    background-color: rgba(255,255,255,0.25);
-}
-
-.info-card h3 {
-    font-size: 1.5em;
-    margin: 0 0 10px 0;
-}
-
-.info-card p {
-    color: white;
-    margin: 0;
-}
-
-/* ===== PROFILE CONTENT ===== */
-.profil-content {
-    padding: 20px;
-}
-
-/* ===== HOBI SECTION ===== */
-.hobi-nav {
-    background-color: rgba(255,255,255,0.2);
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px;
-    backdrop-filter: blur(10px);
-}
-
-.hobi-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.hobi-nav li {
-    color: white;
-    font-size: 1.1em;
-    font-weight: 600;
-    padding: 10px 20px;
-    background-color: rgba(255,255,255,0.1);
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
-.hobi-nav li:hover {
-    background-color: rgba(255,255,255,0.3);
-    transform: scale(1.05);
-}
-
-/* ===== SKILLS PAGE ===== */
-.skills-container {
-    padding: 20px;
-}
-
-.skill-category {
-    background-color: rgba(255,255,255,0.1);
-    padding: 25px;
-    margin: 20px 0;
-    border-radius: 12px;
-    backdrop-filter: blur(10px);
-}
-
-.skill-item {
-    margin: 20px 0;
-}
-
-.skill-info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
-    color: white;
-    font-weight: 600;
-}
-
-.skill-bar {
-    background-color: rgba(255,255,255,0.2);
-    height: 25px;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.skill-progress {
-    background: linear-gradient(90deg, #00ff88, #00ccff);
-    height: 100%;
-    border-radius: 12px;
-    transition: width 1s ease;
-    box-shadow: 0 0 10px rgba(0,255,136,0.5);
-}
-
-/* ===== TOOLS GRID ===== */
-.tools-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.tool-card {
-    background-color: rgba(255,255,255,0.15);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.tool-card:hover {
-    background-color: rgba(255,255,255,0.25);
-    transform: translateY(-3px);
-}
-
-.tool-card p {
-    color: white;
-    font-weight: 600;
-    margin: 0;
-}
-
-/* ===== LEARNING LIST ===== */
-.learning-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 15px;
-}
-
-.learning-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    background-color: rgba(255,255,255,0.15);
-    padding: 15px;
-    border-radius: 8px;
-}
-
-.learning-item span {
-    font-size: 1.5em;
-}
-
-.learning-item p {
-    color: white;
-    font-weight: 600;
-    margin: 0;
-}
-
-/* ===== ACHIEVEMENTS ===== */
-.achievements {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.achievement-item {
-    background-color: rgba(255,255,255,0.15);
-    padding: 20px;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-}
-
-.achievement-item:hover {
-    background-color: rgba(255,255,255,0.25);
-    transform: translateX(5px);
-}
-
-.achievement-item h4 {
-    color: white;
-    margin: 0 0 8px 0;
-    font-size: 1.1em;
-}
-
-.achievement-item p {
-    color: rgba(255,255,255,0.9);
-    margin: 0;
-}
-
-/* ===== CONTACT INFO ===== */
-.contact-info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    margin: 20px 0;
-}
-
-.contact-card {
-    background-color: rgba(255,255,255,0.15);
-    padding: 25px;
-    border-radius: 12px;
-    text-align: center;
-    backdrop-filter: blur(10px);
-}
-
-.contact-card h3 {
-    margin: 0 0 10px 0;
-    font-size: 1.3em;
-}
-
-.contact-card p {
-    color: white;
-    margin: 0;
-    font-weight: 600;
-}
-
-/* ===== CONTACT FORM ===== */
 .contact-form {
     width: 100%;
-    max-width: 600px;
-    margin: 30px auto;
-    padding: 0 20px;
+    max-width: 500px;
+    margin: 0 auto 20px;
 }
 
 .form-group {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     text-align: left;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 10px;
-    color: white;
+    margin-bottom: 8px;
+    color: #333;
     font-weight: bold;
-    font-size: 1.05em;
+    font-size: 14px;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 15px;
-    border: 2px solid rgba(255,255,255,0.3);
-    border-radius: 8px;
-    font-size: 1em;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgba(255,255,255,0.15);
-    color: white;
-    transition: all 0.3s ease;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: rgba(255,255,255,0.6);
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: white;
-    background-color: rgba(255,255,255,0.25);
+    border-color: #4930f2;
+    background-color: white;
 }
 
 .form-group textarea {
     resize: vertical;
-    min-height: 120px;
+    min-height: 100px;
 }
 
 .btn-kirim {
     width: 100%;
-    padding: 15px 25px;
-    background-color: white;
+    padding: 12px 20px;
+    background-color: #e8e8e8;
     border: none;
-    border-radius: 8px;
-    font-size: 1.1em;
+    border-radius: 5px;
+    font-size: 16px;
     font-weight: bold;
-    color: #4930f2;
+    color: #666;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .btn-kirim:hover {
-    background-color: #f0f0f0;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    background-color: #d0d0d0;
 }
 
 .btn-kirim:active {
-    transform: translateY(0);
+    background-color: #c0c0c0;
 }
 
-/* ===== SUCCESS MESSAGE ===== */
-.success-message {
-    background-color: rgba(0,255,136,0.2);
-    border: 2px solid rgba(0,255,136,0.5);
-    color: white;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
+.hobi-nav {
+    background-color: #d1e9ff;
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
     text-align: center;
-    font-weight: bold;
-    animation: fadeIn 0.5s ease;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* ===== SOCIAL LINKS ===== */
-.social {
-    color: white;
-    margin: 25px 20px;
-    text-align: center;
-    font-size: 1.05em;
+ul {
+    display: inline-block;
+    text-align: left;
+    margin: 0;
 }
 
 .social a {
-    color: #00ff88;
+    color: green;
     text-decoration: none;
     font-weight: bold;
-    transition: all 0.3s ease;
 }
 
-.social a:hover {
-    color: #00ccff;
-    text-decoration: underline;
-}
-
-.social-links {
-    padding: 30px 20px;
-    text-align: center;
-}
-
-.social-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
-
-.social-btn {
-    padding: 12px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-    transition: all 0.3s ease;
-}
-
-.social-btn.instagram {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-}
-
-.social-btn.github {
-    background-color: #333;
-}
-
-.social-btn.linkedin {
-    background-color: #0077b5;
-}
-
-.social-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-}
-
-/* ===== FOOTER ===== */
 footer {
-    background-color: rgba(0,0,0,0.3);
-    padding: 20px;
-    text-align: center;
-    color: rgba(255,255,255,0.7);
-    font-size: 0.95em;
-    margin-top: 40px;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #aaa;
 }
-
-/* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 768px) {
-    .ul-awal {
-        flex-direction: column;
-        height: auto;
-    }
-    
-    .li-awal {
-        width: 90%;
-        text-align: center;
-    }
-    
-    h1 {
-        font-size: 2em;
-    }
-    
-    .cta-buttons {
-        flex-direction: column;
-        padding: 0 20px;
-    }
-    
-    .btn {
-        width: 100%;
-    }
-    
-    .quick-info,
-    .contact-info {
-        grid-template-columns: 1fr;
-    }
-    
-    .tools-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .hobi-nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
-    
-    .awalan {
-        border-radius: 10px;
-    }
-    
-    h1 {
-        font-size: 1.8em;
-    }
-    
-    .profile-img {
-        width: 150px;
-        height: 180px;
-    }
-}
-
